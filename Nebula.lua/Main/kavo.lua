@@ -92,7 +92,7 @@ local themeStyles = {
       TextColor = Color3.fromRGB(255,255,255),
       ElementColor = Color3.fromRGB(31, 31, 31)
     },
-    Corn = {
+    Sus = {
       SchemeColor = Color3.fromRGB(249, 100, 30),
       Background = Color3.fromRGB(0, 0, 0),
       Header = Color3.fromRGB(0, 0, 0),
@@ -171,7 +171,7 @@ local SettingsT = {
 
 local Name = "KavoConfig.JSON"
 if not isfile("KavoConfig.JSON") then
-   writefile(Name) 
+   writefile(KavoConfig.JSON) 
 end
 pcall(function()
 
@@ -206,7 +206,7 @@ function Kavo.CreateLib(kavName, themeList)
       themeList = themeStyles.RedBerry
     elseif themeList == "BlueBerry" then
         themeList = themeStyles.BlueBerry
-    elseif themeList == "Corn" then
+    elseif themeList == "Sus" then
         themeList = themeStyles.Corn
     elseif themeList == "Space" then
         themeList = themeStyles.Space
@@ -685,9 +685,9 @@ function Kavo.CreateLib(kavName, themeList)
 
                 touch.Name = "touch"
                 touch.Parent = buttonElement
-                touch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+                touch.BackgroundColor3 = Color3.fromRGB(50, 68, 168)
                 touch.BackgroundTransparency = 1.000
-                touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
+                touch.BorderColor3 = Color3.fromRGB(65,65,65)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
                 touch.Image = "rbxassetid://3926305904"
