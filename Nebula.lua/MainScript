@@ -1,3 +1,3 @@
-local Library = loadstring(game:HttpGet(""))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vqfx/nebula/gh-pages/Nebula.lua/Main/kavo.lua"))()
 
 local Window = Library.CreateLib("Nebula", "Space")
