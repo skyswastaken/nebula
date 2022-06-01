@@ -1,3 +1,4 @@
+-credits vamp 
 local Kavo = {}
 
 local tween = game:GetService("TweenService")
@@ -98,12 +99,12 @@ local themeStyles = {
       TextColor = Color3.fromRGB(255,255,255),
       ElementColor = Color3.fromRGB(31, 31, 31)
     },
-    Kiwi = {
+    Space = {
       SchemeColor = Color3.fromRGB(48, 255, 0),
-      Background = Color3.fromRGB(41, 41, 41),
-      Header = Color3.fromRGB(31, 31, 31),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(66, 66, 66)
+      Background = Color3.fromRGB(105, 50, 168),
+      Header = Color3.fromRGB(168, 168, 50),
+      TextColor = Color3.fromRGB(27, 27, 31),
+      ElementColor = Color3.fromRGB(103, 80, 166)
     },
     Luna = {
       SchemeColor = Color3.fromRGB(126, 6, 232),
@@ -207,8 +208,8 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.BlueBerry
     elseif themeList == "Corn" then
         themeList = themeStyles.Corn
-    elseif themeList == "Kiwi" then
-        themeList = themeStyles.Kiwi
+    elseif themeList == "Space" then
+        themeList = themeStyles.Space
     elseif themeList == "Luna" then
         themeList = themeStyles.Luna
     elseif themeList == "Night" then
