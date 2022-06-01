@@ -102,9 +102,9 @@ local themeStyles = {
     Space = {
       SchemeColor = Color3.fromRGB(103, 69, 214),
       Background = Color3.fromRGB(105, 50, 168),
-      Header = Color3.fromRGB(168, 168, 50),
-      TextColor = Color3.fromRGB(27, 27, 31),
-      ElementColor = Color3.fromRGB(103, 80, 166)
+      Header = Color3.fromRGB(37, 1, 68),
+      TextColor = Color3.fromRGB(104, 49, 328),
+      ElementColor = Color3.fromRGB(67, 37, 148)
     },
     Luna = {
       SchemeColor = Color3.fromRGB(126, 6, 232),
