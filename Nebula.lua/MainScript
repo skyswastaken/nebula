@@ -1,3 +1,27 @@
 local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/vqfx/nebula/gh-pages/Nebula.lua/Main/kavo.lua"))()
 
 local Window = Library.CreateLib("Nebula", "Space")
+
+local Tab1 = Window:NewTab("Combat")
+
+local Section1 = Tab:NewSection("PVP")
+
+
+
+local Tab2 = Window:NewTab("Blantant")
+
+local Section2 = Tab:NewSection("Section Name")
+
+
+
+local Tab3 = Window:NewTab("Player")
+
+local Section3 = Tab:NewSection("Humanoid Stuff")
+
+local Tab4 = Window:NewTab("World")
+
+local Section4 = Tab:NewSection("Map")
+
+local Tab5 = Window:NewTab("Credits")
+
+local Section5 = Tab:NewSection("Founders!")
