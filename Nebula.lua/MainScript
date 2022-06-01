@@ -1,0 +1,3 @@
+local Library = loadstring(game:HttpGet(""))()
+
+local Window = Library.CreateLib("Nebula", "Space")
