@@ -106,12 +106,12 @@ local themeStyles = {
       TextColor = Color3.fromRGB(245, 241, 12),
       ElementColor = Color3.fromRGB(67, 37, 148)
     },
-    Luna = {
-      SchemeColor = Color3.fromRGB(126, 6, 232),
-      Background = Color3.fromRGB(0, 0, 0),
-      Header = Color3.fromRGB(31, 31, 31),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(31, 31, 31)
+    MCCilent = {
+      SchemeColor = Color3.fromRGB(38, 40, 38),
+      Background = Color3.fromRGB(47, 53, 64),
+      Header = Color3.fromRGB(109, 113, 120),
+      TextColor = Color3.fromRGB(110, 114, 120),
+      ElementColor = Color3.fromRGB(57, 67, 85)
     },
     Night = {
       SchemeColor = Color3.fromRGB(37, 37, 166),
