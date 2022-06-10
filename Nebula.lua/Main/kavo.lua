@@ -106,7 +106,7 @@ local themeStyles = {
       TextColor = Color3.fromRGB(245, 241, 12),
       ElementColor = Color3.fromRGB(67, 37, 148)
     },
-    MCCilent = {
+    Impact = {
       SchemeColor = Color3.fromRGB(38, 40, 38),
       Background = Color3.fromRGB(47, 53, 64),
       Header = Color3.fromRGB(109, 113, 120),
