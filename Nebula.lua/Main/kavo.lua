@@ -210,7 +210,7 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.Corn
     elseif themeList == "Space" then
         themeList = themeStyles.Space
-    elseif themeList == "Luna" then
+    elseif themeList == "Impact" then
         themeList = themeStyles.Luna
     elseif themeList == "Night" then
         themeList = themeStyles.Night
