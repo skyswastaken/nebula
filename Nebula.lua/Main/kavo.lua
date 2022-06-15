@@ -1,4 +1,3 @@
-----Credits vamp 
 local Kavo = {}
 
 local tween = game:GetService("TweenService")
@@ -72,53 +71,11 @@ local themeStyles = {
         ElementColor = Color3.fromRGB(224, 224, 224)
     },
     BloodTheme = {
-        SchemeColor = Color3.fromRGB(227, 2, 2),
+        SchemeColor = Color3.fromRGB(227, 27, 27),
         Background = Color3.fromRGB(10, 10, 10),
         Header = Color3.fromRGB(5, 5, 5),
         TextColor = Color3.fromRGB(255,255,255),
         ElementColor = Color3.fromRGB(20, 20, 20)
-    },
-    RedBerry = {
-      SchemeColor = Color3.fromRGB(231, 17, 42),
-      Background = Color3.fromRGB(0, 0, 0),
-      Header = Color3.fromRGB(31, 31, 31),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(31, 31, 31)
-    },
-    BlueBerry = {
-      SchemeColor = Color3.fromRGB(2, 17, 231),
-      Background = Color3.fromRGB(0, 0, 0),
-      Header = Color3.fromRGB(31, 31, 31),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(31, 31, 31)
-    },
-    Sus = {
-      SchemeColor = Color3.fromRGB(249, 100, 30),
-      Background = Color3.fromRGB(0, 0, 0),
-      Header = Color3.fromRGB(0, 0, 0),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(31, 31, 31)
-    },
-    Space = {
-      SchemeColor = Color3.fromRGB(171, 69, 214),
-      Background = Color3.fromRGB(105, 50, 168),
-      Header = Color3.fromRGB(37, 1, 68),
-      TextColor = Color3.fromRGB(245, 241, 12),
-      ElementColor = Color3.fromRGB(67, 37, 148)
-    },
-    Impact = {
-      SchemeColor = Color3.fromRGB(38, 40, 38),
-      Background = Color3.fromRGB(47, 53, 64),
-      Header = Color3.fromRGB(109, 113, 120),
-      TextColor = Color3.fromRGB(110, 114, 120),
-      ElementColor = Color3.fromRGB(57, 67, 85)
-    },
-    Night = {
-      SchemeColor = Color3.fromRGB(37, 37, 166),
-      Background = Color3.fromRGB(24, 24, 107),
-      Header = Color3.fromRGB(28, 28, 198),
-      TextColor = Color3.fromRGB(255,255,255),
-      ElementColor = Color3.fromRGB(31, 31, 31)
     },
     GrapeTheme = {
         SchemeColor = Color3.fromRGB(166, 71, 214),
@@ -170,9 +127,7 @@ local SettingsT = {
 }
 
 local Name = "KavoConfig.JSON"
-if not isfile("KavoConfig.JSON") then
-   writefile(KavoConfig.JSON) 
-end
+
 pcall(function()
 
 if not pcall(function() readfile(Name) end) then
@@ -202,18 +157,6 @@ function Kavo.CreateLib(kavName, themeList)
         themeList = themeStyles.LightTheme
     elseif themeList == "BloodTheme" then
         themeList = themeStyles.BloodTheme
-    elseif themeList == "RedBerry" then
-      themeList = themeStyles.RedBerry
-    elseif themeList == "BlueBerry" then
-        themeList = themeStyles.BlueBerry
-    elseif themeList == "Sus" then
-        themeList = themeStyles.Corn
-    elseif themeList == "Space" then
-        themeList = themeStyles.Space
-    elseif themeList == "Impact" then
-        themeList = themeStyles.Luna
-    elseif themeList == "Night" then
-        themeList = themeStyles.Night
     elseif themeList == "GrapeTheme" then
         themeList = themeStyles.GrapeTheme
     elseif themeList == "Ocean" then
@@ -285,7 +228,6 @@ function Kavo.CreateLib(kavName, themeList)
     ScreenGui.ResetOnSpawn = false
 
     Main.Name = "Main"
-    Main.Active = true
     Main.Parent = ScreenGui
     Main.BackgroundColor3 = themeList.Background
     Main.ClipsDescendants = true
@@ -326,6 +268,28 @@ function Kavo.CreateLib(kavName, themeList)
     title.TextColor3 = Color3.fromRGB(245, 245, 245)
     title.TextSize = 16.000
     title.TextXAlignment = Enum.TextXAlignment.Left
+
+    close.Name = "close"
+    close.Parent = MainHeader
+    close.BackgroundTransparency = 1.000
+    close.Position = UDim2.new(0.949999988, 0, 0.137999997, 0)
+    close.Size = UDim2.new(0, 21, 0, 21)
+    close.ZIndex = 2
+    close.Image = "rbxassetid://3926305904"
+    close.ImageRectOffset = Vector2.new(284, 4)
+    close.ImageRectSize = Vector2.new(24, 24)
+    close.MouseButton1Click:Connect(function()
+        game.TweenService:Create(close, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.InOut), {
+            ImageTransparency = 1
+        }):Play()
+        wait()
+        game.TweenService:Create(Main, TweenInfo.new(0.1, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {
+			Size = UDim2.new(0,0,0,0),
+			Position = UDim2.new(0, Main.AbsolutePosition.X + (Main.AbsoluteSize.X / 2), 0, Main.AbsolutePosition.Y + (Main.AbsoluteSize.Y / 2))
+		}):Play()
+        wait(1)
+        ScreenGui:Destroy()
+    end)
 
     MainSide.Name = "MainSide"
     MainSide.Parent = Main
@@ -685,9 +649,9 @@ function Kavo.CreateLib(kavName, themeList)
 
                 touch.Name = "touch"
                 touch.Parent = buttonElement
-                touch.BackgroundColor3 = Color3.fromRGB(50, 68, 168)
+                touch.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
                 touch.BackgroundTransparency = 1.000
-                touch.BorderColor3 = Color3.fromRGB(65,65,65)
+                touch.BorderColor3 = Color3.fromRGB(27, 42, 53)
                 touch.Position = UDim2.new(0.0199999996, 0, 0.180000007, 0)
                 touch.Size = UDim2.new(0, 21, 0, 21)
                 touch.Image = "rbxassetid://3926305904"
